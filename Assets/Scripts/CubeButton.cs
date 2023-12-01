@@ -9,10 +9,12 @@ public class CubeButton : MonoBehaviour
     public Material materialClickeado;
     public GameObject panelConfirmacion;
     public string sceneName;
+    private AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
-     materialInicial = GetComponent<Renderer>().material;   
+     materialInicial = GetComponent<Renderer>().material;
+     audioSource = GetComponent<AudioSource>();
     }
 
     private void OnMouseDown()
@@ -20,7 +22,12 @@ public class CubeButton : MonoBehaviour
         // Cambia el material del cubo al hacer clic.
         Debug.Log("Cubo click");
         GetComponent<Renderer>().material = materialClickeado;
+        if (audioSource != null && audioSource.clip != null)
+        {
+            audioSource.Play();
+        }
         panelConfirmacion.SetActive(true);
+
         if (panelConfirmacion.activeInHierarchy)
         {
             TextMeshProUGUI textoTMP = panelConfirmacion.GetComponentInChildren<TextMeshProUGUI>();
@@ -54,6 +61,10 @@ public class CubeButton : MonoBehaviour
         // Cambia el material del cubo al hacer clic.
         Debug.Log("Cubo click");
         GetComponent<Renderer>().material = materialClickeado;
+        if (audioSource != null && audioSource.clip != null)
+        {
+            audioSource.Play();
+        }
         panelConfirmacion.SetActive(true);
         if (panelConfirmacion.activeInHierarchy)
         {

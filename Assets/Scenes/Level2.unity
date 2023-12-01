@@ -848,6 +848,7 @@ GameObject:
   - component: {fileID: 1579481561208440878}
   - component: {fileID: 1960545278964779768}
   - component: {fileID: 7772522514250434090}
+  - component: {fileID: 7772522514250434091}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -1002,6 +1003,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1062687824}
+  winSound: {fileID: 8300000, guid: 6bf6a718f6c88ec4e914ea367f3461a9, type: 3}
 --- !u!23 &7265875947193647014
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1116,6 +1118,23 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &7772522514250434091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5673740891711495209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58b7922a341c3af46a979449aa38f5ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sonidoTrafico: {fileID: 8300000, guid: bf798ccbe8f1bc64b8e093e474937b82, type: 3}
+  sonidoCaminar: {fileID: 8300000, guid: 939359d785ef2cb43b149d3c251d6a86, type: 3}
+  sonidoViento: {fileID: 8300000, guid: 9e473a7a17ac29446aa63611c9723490, type: 3}
+  umbralVelocidad: 0.1
+  duracionPaso: 1
 --- !u!33 &8208243268092265812
 MeshFilter:
   m_ObjectHideFlags: 0

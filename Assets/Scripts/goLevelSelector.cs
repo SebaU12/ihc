@@ -19,6 +19,6 @@ public class goLevelSelector : MonoBehaviour
 
     public void GoHome()
     {
-        SceneManager.LoadScene("avance");
+        SceneManager.LoadScene("LevelSelector");
     }
 }
