@@ -39,6 +39,8 @@ public class vrRigV2 : MonoBehaviour
                 controllerButton cbyes = hit.collider.GetComponent<controllerButton>();
                 controllerButtonNo cbno = hit.collider.GetComponent<controllerButtonNo>();
                 goLevelSelector home_button = hit.collider.GetComponent<goLevelSelector>();
+                pauseYes pause_button_yes = hit.collider.GetComponent<pauseYes>();
+                pauseNo pause_button_no = hit.collider.GetComponent<pauseNo>();
                 if (cubeButton != null)
                 {
                     cubeButton.OnCubeTouched(); 
@@ -54,6 +56,13 @@ public class vrRigV2 : MonoBehaviour
                 if (home_button != null)
                 {
                     home_button.GoHome();
+                }
+                if (pause_button_yes != null)
+                {
+                    pause_button_yes.pauseButton();
+                }
+                if (pause_button_no != null){
+                    pause_button_no.pauseButton();
                 }
             }
             else

@@ -14,7 +14,6 @@ public class GoalHandler : MonoBehaviour
             // Reproduce el sonido al ganar
             AudioSource.PlayClipAtPoint(winSound, transform.position);
 
-            // Carga la escena "premio"
             SceneManager.LoadScene("premio");
 
             Debug.Log("Yes");
